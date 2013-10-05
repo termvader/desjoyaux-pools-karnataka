@@ -26,7 +26,8 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 			lastHash = '',
 			menuHeight = $smint.height(),
 			curi = 0,
-			stickyTop = $smint.offset().top;
+			stickyTop = $smint.offset().top,
+			isStuck = false;
 
 		var stickyMenu = function(scrollingDown) {
 			// current distance top
@@ -39,11 +40,17 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 					$smint.css({ 'position': 'fixed', 'top': 0, 'left': -$(window).scrollLeft() }).addClass('fxd');
 				}
 				else {
-					$smint.css({ 'position': 'fixed', 'top': 0, 'left': 'auto' }).addClass('fxd');
+					if(!isStuck) {
+						$smint.css({ 'position': 'fixed', 'top': 0, 'left': 'auto' }).addClass('fxd');
+					}
 				}
+				isStuck = true;
 			}
 			else {
-				$smint.css({ 'position': 'absolute', 'top': stickyTop, 'left': 'auto' }).removeClass('fxd');
+				if(isStuck) {
+					$smint.css({ 'position': 'absolute', 'top': stickyTop, 'left': 'auto' }).removeClass('fxd');
+					isStuck = false;
+				}
 			}
 
 			if (!scrollingDown) {
@@ -118,17 +125,17 @@ If you like Smint, or have suggestions on how it could be improved, send me a tw
 			$(this).on('click', function(e) {
 				// stops empty hrefs making the page jump when clicked
 				// Added after the check of smint-disableAll so that if its an external href it will work.
-				//e.preventDefault();
+				e.preventDefault();
 				
 				// Scroll the page to the desired position!
 				$("html, body").animate({ scrollTop: sectionTop - menuHeight}, settings.scrollSpeed);
 			})
 		});
 
-		if( (window.location.hash) && (window.location.hash != "#") ) {
+		/*if( (window.location.hash) && (window.location.hash != "#") ) {
 			// Scroll to the set hash.
 			$('a[href=' + window.location.hash + ']').trigger('click');
-		}
+		}*/
 		
 	}
 

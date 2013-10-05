@@ -2,14 +2,10 @@
 
 
 body {
-	font-family: Helvetica, Arial, Verdana, sans-serif;
-	color: #999;
-	font-size: 12px;
-	background:#bfbfbf;
-
-	
+	font-family: 'Open Sans', sans-serif;
+	color: #fff;
+	font-size: 12px;	
 }
-
 
 h1, h2 {
 	font-family: 'Open Sans', sans-serif;
@@ -22,14 +18,13 @@ h1 {
 	font-size: 36px;
 	letter-spacing: -2px;
 	line-height: 100%;
+	color: #ffffff;
 }
 
 h1.title {
 	font-size: 46px;
 	font-weight: 700;
-	color: #6a6a6a;
-
-
+	color: #ffffff;
 }
 
 
@@ -43,6 +38,10 @@ ul {
 
 p {
 	margin: 0 0 15px 0;
+}
+
+a {
+	color: #ccc;
 }
 
 .menuBtn {
@@ -59,24 +58,21 @@ p {
 }
 
 .active {
-	background: #3B5323;
+	background: #005a9c;
 }
 .clear {
 	clear: both;
 }
 .wrap {
-		/*background:url(../images/bg.png) top left repeat-x;*/
-		width: 100%;
-		max-width: 1140px;
-		min-width: 960px;
-		z-index: 10;
-		position: relative;
-		margin: 0 auto;
-		padding: 0;
-
+	/*background:url(../images/bg.png) top left repeat-x;*/
+	width: 100%;
+	max-width: 1140px;
+	min-width: 960px;
+	z-index: 10;
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
 }
-
-
 
 .section {
 	width: 100%;
@@ -84,10 +80,8 @@ p {
 	min-width: 960px;
 	z-index: 10;
 	position: relative;
-	margin: 0 auto;
-	padding: 0 0 20px 0;
+	margin: 0 auto 0 auto;
 }
-
 
 .inner {
 	width: 960px;
@@ -95,29 +89,27 @@ p {
 	position: relative;
 	min-height: 50px;
 	padding:30px 0;
-	font-size: 18px;
+	font-size: 16px;
 	font-family: 'Open Sans', sans-serif;
 	font-weight: 300;
 	padding:30px 0;
 }
 
-
 /* This is the selector i used for my menu, it needs to be set as position:absolute; */
 .subMenu {
 	position: absolute;
-	top: 462px;
+	top: 620px;
 	height: 50px;
 	z-index: 1000;
 	width: 100%;
 	max-width: 1140px;
 	min-width: 960px;
-	background: #aabd46;
-
+	background: #009bda;
 }
 
 .subMenu li {
 	display: block;
-	width: 14%;
+	width: 20%;
 	float: left;
 }
 
@@ -128,46 +120,147 @@ p {
 	color: #fff;
 	height: 50px;
 	line-height: 50px;
-	font-size: 14px;
+	font-size: 16px;
 }
 
 /* SECTIONS */
 .sTop {
-	min-height: 630px;
-	background:#e5e5e5;
-	color:#3d3d3d;
-	
-}
-
-
-
-.s1 {
-	min-height: 500px;
-	background: #2e2e2e;
+	height: 700px;
+	overflow: hidden;
+	padding: 0;
 }
 
 
 .s2 {
-	min-height: 500px;
-	background: #3f3f3f;
+	height: 930px;
+	background: #fff;
+	padding: 0;
 }
 
 
 .s3 {
 	min-height: 500px;
-	background: #504f4f;
+	background: #c6e1ec;
 }
 
+.s3 h1{
+	color: #005a9c;
+}
+
+#map {
+	margin: auto;
+	width: 640px;
+}
+
+small {
+	font-size: 10px;
+}
 
 .s4 {
 	min-height: 500px;
-	background: #6e87a1;
-	color: white;
+	background: #5eaac9;
+}
+
+#radioList {
+	padding-left: 50px;
+	margin-bottom: 20px;
+}
+
+input[type=radio] {
+	display:none;
+}
+ 
+input[type=radio] + label {
+	display:inline-block;
+	margin:-2px;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	font-size: 16px;
+	line-height: 2em;
+	color: #333;
+	text-align: center;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+	vertical-align: middle;
+	cursor: pointer;
+	background-color: #f5f5f5;
+	background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+	background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+	background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+	background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+	background-repeat: repeat-x;
+	border: 1px solid #ccc;
+	border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+	border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+	border-bottom-color: #b3b3b3;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+	filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+	-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+	width: 300px;
+}
+ 
+input[type=radio]:checked + label {
+	background-image: none;
+	outline: 0;
+	-webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	-moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+	background-color:#e0e0e0;
+	width: 300px;
+}
+
+input[type=text], input[type=email]{
+	margin: 5px;
+	display: inline-block;
+	background: none repeat scroll 0 0 #F6F6F6;
+	border: 1px solid #DCDCDC;
+	-webkit-border-radius: 0.33em 0.33em 0.33em 0.33em;
+	-moz-border-radius: 0.33em 0.33em 0.33em 0.33em;
+	border-radius: 0.33em 0.33em 0.33em 0.33em;
+	color: #333;
+	outline-color: transparent;
+	outline-style: none;
+	padding: 8px 8px 6px;
+	width: 250px;
+	transition: all 1s ease 0s;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 1.5;
+}
+
+input[type=submit]{
+	background: none repeat scroll 0 0 #fff;
+	/*box-shadow: 0 0.25em 0 0 #2077B2;*/
+	color: #333 !important;
+	margin-top: 5px;
+	margin-bottom: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	-webkit-border-radius: 0.33em 0.33em 0.33em 0.33em;
+	-moz-border-radius: 0.33em 0.33em 0.33em 0.33em;
+	border-radius: 0.33em 0.33em 0.33em 0.33em;
+	cursor: pointer;
+	display: block;
+	font-weight: 400;
+	font-size: 16px;
+	padding: 1rem 1rem 1rem;
+	text-decoration: none;
+	-moz-box-sizing: border-box;
+	width: 200px;
+	text-align: center;
+	border:0px;
 }
 
 .s5 {
-	min-height: 500px;
-	background: #293b4d;
-	color: white;
+	min-height: 280px;
+	background: #2f4e65;
 }
 
+footer {
+	margin-top: 40px;
+	text-align: center;
+	min-width: 960px;
+	max-width: 1140px;
+}

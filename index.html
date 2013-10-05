@@ -7,7 +7,15 @@
 	<meta name = "description" content = "" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1 user-scalable=no">
 
-	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">
+	<!--<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet" type="text/css">-->
+	<style type="text/css">
+		@font-face {
+			font-family: 'Open Sans';
+			font-style: normal;
+			font-weight: 400;
+			src: local('Open Sans'), local('OpenSans'), url(css/OpenSans400.woff) format('woff');
+		}
+	</style>
 	<link href="css/demo.css" rel="stylesheet" type="text/css">
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" 	src="js/jquery.smint.js"></script>
@@ -15,7 +23,7 @@
 
 		$(document).ready(function () {	
 			$('.subMenu').smint({
-				'scrollSpeed' : 1000
+				'scrollSpeed' : 500
 			});
 		});
 
@@ -27,54 +35,31 @@
 	<div class="wrap">
 		<ul class="subMenu" >
 	 		<li><a href="#Home" id="sTop">Home</a></li>
-			<li><a href="#Section1" id="s1">Section 1</a></li>
-			<li><a href="#Section2" id="s2">Section 2</a></li>
-			<li><a href="#Section3" id="s3">Section 3</a></li>
+			<li><a href="#Showroom" id="s2">Showroom</a></li>
+			<li><a href="#Location" id="s3">Location</a></li>
 			<li><a href="#RSVP" id="s4">RSVP</a></li>
 			<li><a href="#Contact" id="s5">Contact</a></li>
 		</ul>
 
 
 	<div class="section sTop">
-		
-
-
-		<div class="inner">
-			<h1>Welcome to the SMINT Demo page! </h1>
-			<p>Click the links below to see it in action!</p>
-
-		</div>
-		<br class="clear">
-	</div>
-
-
-
-
-
-	<div class="section s1">
-		
-		<div class="inner">
-
-			<h1>Section 1</h1>
-
-		</div>
-
+		<img src="img/home2.jpg">
 	</div>
 
 	<div class="section s2">
-		<div class="inner">
-
-			<h1>Section 2</h1>
-
-		</div>
-
+		<img src="img/showroom.jpg">
 	</div>
 
 	<div class="section s3">
 		<div class="inner">
 
-		<h1>Section 3</h1>
-
+			<h1>Location</h1>
+			
+			<div id="map">
+				<iframe width="640" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps?q=13.062501,77.649569&amp;num=1&amp;t=m&amp;hl=en&amp;ie=UTF8&amp;ll=13.062506,77.649565&amp;spn=0.010033,0.013733&amp;z=16&amp;output=embed"></iframe>
+				<br />
+				<small><a href="https://maps.google.co.in/maps?q=13.062501,77.649569&amp;num=1&amp;t=m&amp;hl=en&amp;ie=UTF8&amp;ll=13.062506,77.649565&amp;spn=0.010033,0.013733&amp;z=16&amp;source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+			</div>
 		</div>
 
 	</div>
@@ -82,7 +67,31 @@
 	<div class="section s4">
 		<div class="inner">
 
-			<h1>Section 4</h1>
+			<h1>RSVP</h1>
+			<p>
+				We are inaugrating our new premises on November 3rd and would love to see you there.<br />
+<form action="https://docs.google.com/forms/d/1g1Q7XFfjP9jzswdE94nz6K7oz5kiJBv7M8vc39JPVp4/formResponse" method="POST" id="ss-form" target="_blank" onsubmit=""><ol style="padding-left: 0">
+<p>Hi, my name is <input type="text" name="entry.2018695921" value="" class="ss-q-short" id="entry_2018695921" dir="auto" aria-required="true" required="" title=""></p>
+<p>And</p>
+<div id="radioList">
+	<input type="radio" name="entry.462104463" value="I&#39;ll be there." id="group_462104463_1" class="ss-q-radio" aria-label="I&#39;ll be there." required="" checked>
+	<label for="group_462104463_1">I&#39;ll be there.</label>
+	<br /><br />
+	<input type="radio" name="entry.462104463" value="I won&#39;t be able to make it." id="group_462104463_2" class="ss-q-radio" aria-label="I won&#39;t be able to make it." required="">
+	<label for="group_462104463_2">I won&#39;t be able to make it.</label>
+	<br /><br />
+	<input type="radio" name="entry.462104463" value="Please remind me to get back to you." id="group_462104463_3" class="ss-q-radio" aria-label="Please remind me to get back to you." required="">
+	<label for="group_462104463_3">Please remind me to get back to you.</label>
+</div>
+<p>
+	Do remind me, my email is <input type="email" name="entry.104545326" value="" class="ss-q-short" id="entry_104545326" dir="auto" title="Must be a valid email address"><br />
+	and my contact number is &nbsp;<input type="text" name="entry.1861589902" value="" class="ss-q-short" id="entry_1861589902" dir="auto" title="">
+</p>
+<input type="hidden" name="draftResponse" value="[]">
+<input type="hidden" name="pageHistory" value="0">
+<input type="submit" name="submit" value="Submit" id="ss-submit">
+</form>
+			</p>
 
 		</div>
 
@@ -90,11 +99,14 @@
 
 	<div class="section s5">
 		<div class="inner">
-		
-		<h1>Section 5</h1>
-		
+			<h1>Contact</h1>
+			<p>
+				Saleem Zamindar<br />
+				93412 25635<br />
+				zamindar@desjoyauxpoolskarnataka.com
+			</p>
 		</div>
-
+		<footer>Website developed using <a href="https://github.com/termvader/smint" target="_blank">(smint)</a>. Hosted on <a href="https://github.com/termvader/desjoyaux-pools-karnataka/tree/gh-pages" target="_blank">Github</a></footer>
 	</div>
 
 	
@@ -102,18 +114,7 @@
 </div>
 
 <script type="text/javascript">
- /*
- 	Anyways this is not going to be give any analytics if hosted on a different domain.
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-9804757-1']);
-  _gaq.push(['_trackPageview']);
- 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
- */
+
 </script>
 
 </body>
